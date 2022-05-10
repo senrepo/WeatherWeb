@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Weather Data</h1>
+
+      <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>TempC</th>
+                <th>TempF</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var data in Model)
+            {
+                <tr>
+                    <td>@data.Date</td>
+                    <td>@data.TemperatureC</td>
+                    <td>@data.TemperatureF</td>
+                    <td>@data.Summary</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+</div>
